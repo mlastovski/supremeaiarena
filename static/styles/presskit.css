@@ -1,0 +1,174 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+  
+  .page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+  }
+  
+  /* for toggle behavior */
+  
+  #sidebar.active {
+    margin-left: -17rem;
+  }
+  
+  #content.active {
+    width: 100%;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -17rem;
+    }
+    #sidebar.active {
+      margin-left: 0;
+    }
+    #content {
+      width: 100%;
+      margin: 0;
+    }
+    #content.active {
+      margin-left: 17rem;
+      width: calc(100% - 17rem);
+    }
+  }
+  
+  /*
+  *
+  * ==========================================
+  * FOR DEMO PURPOSE
+  * ==========================================
+  *
+  */
+  
+  body {
+    background: rgb(48, 48, 54);
+    background-image: url(../img/lines_bg_darker.png);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .separator {
+    margin: 3rem 0;
+    border-bottom: 1px solid white;
+  }
+  
+  .text-uppercase {
+    letter-spacing: 0.1em;
+  }
+  
+  .text-gray {
+    color: #aaa;
+  }
+  
+.blank {
+    padding: 10px;
+}
+
+/* .embedvideo {
+    padding-right: 700%;
+} */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    }
+     
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+}
+
+.images-section {
+    width: 500px;
+    height: auto;
+    border: 1px solid white;
+}
+
+.redlink {
+    color: red !important;
+}
+
+#content {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
+    position: relative;
+  } */
+
+#images-yaya {
+  width: 500px;
+  height: auto;
+}
+
+.btn {
+  border-radius: 0 !important;
+  background-color: red;
+  border: 0px;
+  color: white;
+}
+
+.btn:hover {
+  display: inline-block;
+  transform: scale(1.1) !important;
+  transition: 0.2s linear;
+}
+
+#go-to-website {
+  color: red;
+}
+
+#go-to-website:hover {
+  display: inline-block;
+  transform: scale(1.1) !important;
+  transition: 0.2s linear;
+  color: blue;
+}
+
+.nav-link:hover {
+  color: red !important;
+}
+
+.text-dark {
+  color: black !important;
+}
+
+.text-dark:hover {
+  color: red !important;
+}
+
+.active {
+  color: red !important;
+}

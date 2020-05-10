@@ -1,9 +1,25 @@
-from app import MailingGroup
-
-# emails = MailingGroup.query.all()
-#
-# for email in emails:
-#     print(email.__dict__)
+# -*- coding: utf-8 -*-
+import sqlite3
 
 
-print(bool(MailingGroup.query.filter_by(mail='mark.lastovskyy@gmai.com').first()))
+def commit_to_text_file():
+    conn = sqlite3.connect('newsletter.db')
+    cur = conn.cursor()
+    cur.execute("SELECT mail FROM mailing_group")
+
+    rows = cur.fetchall()
+    rows_list = [str(x) for x, in rows]
+    string_from_tuple = ''.join(str(rows_list))
+    remove_bad_char = string_from_tuple.replace("[", "").replace("]", "").replace("(", "").replace(")", "").replace(",",
+                                                                                                                    "").replace(
+        "'", "")
+    # print(remove_bad_char)
+    clear_emails = remove_bad_char.replace(" ", "\n")
+
+    text_file = open("emails.txt", "wt")
+    n = text_file.write(clear_emails)
+    text_file.close()
+
+
+if __name__ == '__main__':
+    commit_to_text_file()

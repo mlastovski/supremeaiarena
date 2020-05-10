@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import exists
+from emails import commit_to_text_file
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///newsletter.db'
@@ -45,22 +46,26 @@ def index():
         # If yes - return an error
         if email_exists == True:
 
+            print('We already have this email, returning error page to the user')
             print(email, ' already exists')
             return redirect('/fail')
 
         # if no - commit do database
         elif email_exists == False:
+            print('New email, commiting to the database')
             print(email, ' does not exist')
 
             mailing_group = MailingGroup(mail=email)
             db.session.add(mailing_group)
             db.session.commit()
+            commit_to_text_file()
             return redirect('/success')
 
         # Debug for mistakes, redirects to main page
         else:
             print('sho')
             return redirect('/')
+
 
     else:
         return render_template('index.html')

@@ -17,7 +17,12 @@ def commit_to_text_file():
     clear_emails = remove_bad_char.replace(" ", "\n")
 
     text_file = open("emails.txt", "wt")
-    n = text_file.write(clear_emails)
+    text_file.write(clear_emails)
+    text_file.close()
+
+    emails_with_coma = remove_bad_char.replace(" ", ", ")
+    text_file_two = open("emails_with_coma.txt", "wt")
+    text_file_two.write(emails_with_coma)
     text_file.close()
 
 

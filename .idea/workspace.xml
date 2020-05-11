@@ -4,13 +4,11 @@
     <list default="true" id="d51f5ede-0d36-4d2f-abfd-e6700c54a967" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emails.py" beforeDir="false" afterPath="$PROJECT_DIR$/emails.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/emails.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newsletter.db" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_email.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/success.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +102,7 @@
       <workItem from="1588989024564" duration="9331000" />
       <workItem from="1588998387948" duration="1917000" />
       <workItem from="1589119171952" duration="7860000" />
-      <workItem from="1589139183555" duration="10290000" />
+      <workItem from="1589139183555" duration="13637000" />
     </task>
     <servers />
   </component>
@@ -126,6 +124,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/supremeaiarena_backend$supremeaiarena_backend.coverage" NAME="supremeaiarena_backend Coverage Results" MODIFIED="1589129353368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/supremeaiarena$supremeaiarena_backend.coverage" NAME="supremeaiarena_backend Coverage Results" MODIFIED="1589159377371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/supremeaiarena$supremeaiarena_backend.coverage" NAME="supremeaiarena_backend Coverage Results" MODIFIED="1589193946082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

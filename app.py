@@ -19,12 +19,9 @@ class MailingGroup(db.Model):
         return "<MailingGroup mail='%s'>" % self.mail
 
 
-
-
 @app.route('/', methods=["POST", "GET"])
 @app.route('/home', methods=["POST", "GET"])
 def index():
-
     if request.method == "POST":
         # emails_list = MailingGroup.query.all()
         #
@@ -49,7 +46,7 @@ def index():
         email_exists = db.session.query(exists().where(MailingGroup.mail == email)).scalar()
 
         # If yes - return an error
-        if email_exists == True:
+        if email_exists:
 
             print('We already have this email, returning error page to the user')
             print(email, ' already exists')
@@ -59,7 +56,7 @@ def index():
             return redirect('/fail')
 
         # if no - commit do database
-        elif email_exists == False:
+        elif not email_exists:
             print('New email, commiting to the database')
             print(email, ' does not exist')
 
@@ -92,6 +89,7 @@ def success():
 @app.route('/fail')
 def fail():
     return render_template('fail.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

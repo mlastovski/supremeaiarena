@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='styles/animation.css') }}">#}
+
+    <link rel="icon" href="static/img/icon.png">
+    <!-- Font Awesome Icons required CSS and JS -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+    <script src="https://kit.fontawesome.com/c8934f5c4f.js" crossorigin="anonymous"></script>
+
+    <title>Supreme AI Arena</title>
 </head>
 <body>
-    <h1>success</h1>
+    <section class="h-100" id="background-logo">
+      <header class="container h-100">
+        <div class="d-flex align-items-center justify-content-center h-100">
+          <div class="d-flex flex-column">
+            <p class="lead align-self-center p-2 text-center" id="success">Congrats! Now you will be always up-to-date.</p>
+              <a href="/" class="align-self-center">
+                <button class="btn align-self-center p-2" type="button" name="button">Back to Website</button>
+              </a>
+          </div>
+        </div>
+      </header>
+    </section>
 </body>
 </html>

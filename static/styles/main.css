@@ -1,6 +1,8 @@
 html, body {
     background-color: black;
     font-family: 'Jost', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 #padding_zero {
@@ -125,7 +127,7 @@ html, body {
     transform: translate(-50%, -50%);
 }
 
-svg:hover {
+.iconens:hover {
     fill: red;
     transition: 0.3s linear;
     transform: scale(1.1) !important;
@@ -146,6 +148,11 @@ svg:hover {
     }
 }
 
+.btn {
+    color: white !important;
+    background-color: red !important;
+}
+
 .btn-light {
     background-color: red !important;
     color: white !important;
@@ -156,7 +163,8 @@ svg:hover {
 
 .btn:hover {
     display: inline-block;
-    transform: scale(1.1) !important;
+    background-color: rgb(0, 128, 255) !important;
+    /*transform: scale(1.1) !important;*/
     transition: 0.2s linear;
 }
 
@@ -313,4 +321,26 @@ i:hover {
 
 * {
     border-radius: 0 !important;
+}
+
+#success {
+    color: white !important;
+}
+
+#success-height {
+    height: 100vh !important;
+}
+
+#pad-left-right-0 {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+}
+
+#centered-row {
+    width: 100% !important;
+}
+
+#background-logo {
+    background-image: url(../img/background_logo.png);
+    background-size: cover;
 }

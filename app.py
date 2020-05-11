@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import exists
 from emails import commit_to_text_file
@@ -38,7 +38,12 @@ def index():
         # Getting email from click
         email = request.form['mail']
         # print(email)
-
+        if email == '':
+            print('empty field')
+            # resp = jsonify('<span style=\'color:red;\'>Username is required field.</span>')
+            # resp.status_code = 200
+            # return resp
+            return redirect('/fail')
 
         # Checking if email already exists
         email_exists = db.session.query(exists().where(MailingGroup.mail == email)).scalar()
@@ -48,6 +53,9 @@ def index():
 
             print('We already have this email, returning error page to the user')
             print(email, ' already exists')
+            # resp = jsonify('<span style=\'color:red;\'>Username unavailable</span>')
+            # resp.status_code = 200
+            # return resp
             return redirect('/fail')
 
         # if no - commit do database
